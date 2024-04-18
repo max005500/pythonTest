@@ -30,6 +30,18 @@ class Tablero:
         print('-----------')
         print('   |   |')
         print(' ' + self.tab[1] + ' | ' + self.tab[2] + ' | ' + self.tab[3])
+        
+    def interface(self):
+        print('   |   |')
+        print(' ' + '7' + ' | ' + '8' + ' | ' + '9')
+        print('   |   |')
+        print('-----------')
+        print('   |   |')
+        print(' ' + '4' + ' | ' + '5' + ' | ' + '6')
+        print('   |   |')
+        print('-----------')
+        print('   |   |')
+        print(' ' + '1' + ' | ' + '2' + ' | ' + '3')
 
     #NOTE: Retornar si es posible seguir jugando o no (define empate)
     def completeTab(self):
@@ -84,7 +96,7 @@ class Tablero:
             jugSimb = 'X'
 
     #NOTE: La posicion en donde el bot realiza su jugada se define en base a prioridades:
-    
+
     #NOTE: 1 primera prioridad: Blockear al jugador para que no gane
 
         for jug in range(1,10):
@@ -182,6 +194,8 @@ while True:
     bot = Entity(pc)
     turn = random.randint(0,1)
 
+    print('Relacion numeros y casillas')
+    tab.interface()
     tab.imprimir()
     if turn == 0:
        print('Comienza el bot')
