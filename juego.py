@@ -146,7 +146,7 @@ def move():
     while True:
         try:
            mov = int(input())
-           if 9 < mov < 1 : 
+           if (9 < mov or mov < 1) : 
                print('Ingrese un valor de 1 a 9: ')
            else: 
                return mov
@@ -194,8 +194,11 @@ while True:
     bot = Entity(pc)
     turn = random.randint(0,1)
 
-    print('Relacion numeros y casillas')
+    print('Relacion movidas y casillas')
     tab.interface()
+    print(' ')
+    print('----------------')
+    print(' ')
     tab.imprimir()
     if turn == 0:
        print('Comienza el bot')
